@@ -35,25 +35,66 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
   <title>About Us</title>
+  <style>
+    /* Circle styles */
+    .circle {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background-color: black;
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 99999999;
+      transition: transform 0.1s ease-out;
+    }
+  </style>
 </head>
 
 <body>
+    <!-- Circles -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
   <style>
     .action {
       position: fixed;
       top: 20px;
       right: 30px;
     }
-
+ 
     .action .profile {
+       
       position: relative;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
+      width:  60px;
+      height:  60px;
+      border-radius:  50%;
       overflow: hidden;
       cursor: pointer;
+      
+ContactPageIssue
+      right:  7rem;
+     
     }
-
+ 
     .action .profile img {
       position: absolute;
       top: 0;
@@ -349,10 +390,7 @@
             <a href="../../index.html" onclick="lenis.scrollTo('#home')" class="navbar-link" data-nav-link><i
                 class="ri-home-fill"></i> Home</a>
           </li>
-          <li class="navbar-item">
-            <a href="../html/about.html" class="navbar-link" data-nav-link><i class="ri-home-fill"></i> About Us </a>
-          </li>
-
+         
           <li class="navbar-item">
             <a href="../../index.html#benefits" onclick="lenis.scrollTo('#benefits')" class="navbar-link"
               data-nav-link><i class="ri-bar-chart-fill"></i> Benefits</a>
@@ -362,6 +400,10 @@
             <a href="../../index.html#genre" onclick="lenis.scrollTo('#genre')" class="navbar-link" data-nav-link><i
                 class="ri-bar-chart-fill"></i> Genre</a>
           </li>
+        </li>
+        <li class="navbar-item">
+          <a href="../../index.html#rateus" onclick="openRateUsModal(); return false;" class="navbar-link">Rate Us</a>
+        </li>
 
           <li class="navbar-item">
             <a href="../../index.html#contact" onclick="lenis.scrollTo('#contact')" class="navbar-link" data-nav-link><i
@@ -371,11 +413,13 @@
             <a href="../../index.html#faq" onclick="lenis.scrollTo('#faqq')" class="navbar-link" data-nav-link>
               <i class="ri-questionnaire-fill"></i> FAQ
             </a>
-          </li>
+         
 
           <li class="navbar-item">
-            <a href="../../index.html#rateus" onclick="openRateUsModal(); return false;" class="navbar-link">Rate Us</a>
+            <a href="../html/about.html" class="navbar-link" data-nav-link><i class="ri-home-fill"></i> About Us </a>
           </li>
+
+        
 
           <li class="navbar-item" id="login-signup-link">
             <a href="../html/login.html" class="navbar-link">Login/Signup</a>
@@ -392,12 +436,17 @@
 
               <ul class="dropdown-menu-list">
                 <li>
-                  <a href="chat.html" class="navbar-link"
+                  <a href="../../chat.html" class="navbar-link"
                     style="font-family: sans-serif; color: black; margin-bottom: 5px;">
                     Community chat
                   </a>
                 </li>
-
+                <li>
+                  <a href="bookpref.html" class="navbar-link"
+                    style="font-family: sans-serif; color: black; margin-bottom: 5px;">
+                    Book Prefer Quiz
+                  </a>
+                </li>
                 <li class="dropdown-menu-item">
                   <a href="../html/pricing.html" onclick="lenis.scrollTo('#pricing')" class="navbar-link"
                     data-nav-link><i class="ri-price-tag-3-fill"></i> Pricing</a>
@@ -419,7 +468,7 @@
                       class="ri-price-tag-3-fill"></i>Read Later</a>
                 </li>
                 <li class="dropdown-menu-item">
-                  <a href=".../html/ConnReader.html" class="navbar-link" data-nav-link><i
+                  <a href="./ConnReader.html" class="navbar-link" data-nav-link><i
                       class="ri-price-tag-3-fill"></i>Reader Connection</a>
                 </li>
                 <li class="dropdown-menu-item">
@@ -937,7 +986,7 @@
           <div id="quicklinks">
             <div>
               <ul>
-                <li class="foot-quick"><a href="index.html" onclick="lenis.scrollTo('#home')">Home</a></li>
+                <li class="foot-quick"><a href="../../index.html#home" onclick="lenis.scrollTo('#home')">Home</a></li>
                 <li class="foot-quick"><a href="../../index.html#benefits"
                     onclick="lenis.scrollTo('#benefits')">Benefits</a></li>
                 <li class="foot-quick"><a href="../../index.html#chapters"
@@ -1005,52 +1054,8 @@
           </script>
 
 
-          <div class="icons">
-            <a href="https://www.discord.com/" target="_blank">
-             <div class="icon">
-               <i class="fab fa-discord" title="Discord" style="cursor: pointer;"></i>
-             </div>
-            </a>
-
-            <a href="https://www.linkedin.com/in/anurag-verma-b91417253/" target="_blank">
-              <div class="icon">
-                <i class="fab fa-linkedin" title="linkedin" style="cursor: pointer;"></i>
-              </div>
-            </a>
-
-            <a href="#" target="_blank">
-              <div class="icon">
-                <i class="fab fa-facebook" title="Facebook" style="cursor: pointer;"></i>
-              </div>
-            </a>
-
-            <a href="https://x.com/anuragverma_108" target="_blank">
-              <div class="icon">
-                <i class="fab fa-twitter" title="X" style="cursor: pointer;"></i>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="icon">
-                <i class="fab fa-instagram" title="Instagram" style="cursor: pointer;"></i>
-              </div>
-            </a>
-
-
-            <a href="https://www.youtube.com/@anuragbytes" target="_blank" title="YouTube">
-              <div class="icon">
-                <i class="fab fa-youtube" style="cursor: pointer;"></i>
-              </div>
-            </a>
-            <a href="">
-              <div class="icon">
-                <i class="fab fa-github" title="Github"></i>
-              </div>
-            </a>
-
-          </div>
-
-
+          
+           
           <div id="back-to-top-container" onclick="lenis.scrollTo('#home')" class="right">
             <div class="circle1">
               <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -1060,13 +1065,101 @@
               </svg>
             </div>
           </div>
-
+           
         </div>
+        
       </div>
 
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffc0cb; /* Pink background */
+        }
 
+        #follow-heading {
+            font-size: 30px;
+            color: grey;
+            text-align: center;
+        }
 
+        .icons {
+            display: flex;
+            justify-content: center; /* Center the icons */
+            gap: 20px; /* Reduced gap between icons */
+            align-items: center;
+            width: 100%; /* Full page width */
+            padding: 20px 0;
+            background-color: transparent; /* Remove white background */
+        }
 
+        .icon {
+            font-size: 40px; /* Increased initial size of icons */
+            color: grey; /* Initial grey color */
+            transition: all 0.3s ease;
+        }
+
+        .icon i {
+            filter: grayscale(100%); /* Grayscale initially */
+            transition: all 0.3s ease;
+        }
+
+        .icon:hover i, .icon:focus i {
+            filter: grayscale(0%); /* Color on hover or focus */
+            transform: scale(1.25); /* Slight zoom effect on hover */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit; /* Ensure icon colors remain */
+        }
+    </style>
+    <div class="icons">
+      
+       <h4 id="follow-heading">Follow Us :</h4>
+       
+    
+        <a href="https://www.linkedin.com/in/anurag-verma-b91417253/" target="_blank">
+            <div class="icon">
+                <i class="fab fa-linkedin" title="LinkedIn"></i>
+            </div>
+        </a>
+    
+        <a href="#" target="_blank">
+            <div class="icon">
+                <i class="fab fa-facebook" title="Facebook"></i>
+            </div>
+        </a>
+        <a href="https://www.discord.com/" target="_blank">
+          <div class="icon">
+              <i class="fab fa-discord" title="Discord"></i>
+          </div>
+      </a>
+        <a href="https://x.com/anuragverma_108" target="_blank">
+            <div class="icon">
+                <i class="fab fa-twitter" title="X"></i>
+            </div>
+        </a>
+    
+        <a href="#">
+            <div class="icon">
+                <i class="fab fa-instagram" title="Instagram"></i>
+            </div>
+        </a>
+    
+        <a href="https://www.youtube.com/@anuragbytes" target="_blank">
+            <div class="icon">
+                <i class="fab fa-youtube" title="YouTube"></i>
+            </div>
+        </a>
+    
+        <a href="#">
+            <div class="icon">
+                <i class="fab fa-github" title="Github"></i>
+            </div>
+        </a>
+    </div>
       <!-- adding privacy policy and copyright popup-->
       <div style="text-align: center; align-items: center;">
         <p style="text-align: center">
@@ -1216,33 +1309,8 @@
       });
       //Custom Cursor
 
-      const coords = { x: 0, y: 0 };
-      const circles = document.querySelectorAll(".circle");
-      const colors = [
-        "#ffb56b",
-        "#fdaf69",
-        "#f89d63",
-        "#f59761",
-        "#ef865e",
-        "#ec805d",
-        "#e36e5c",
-        "#df685c",
-        "#d5585c",
-        "#d1525c",
-        "#c5415d",
-        "#c03b5d",
-        "#b22c5e",
-        "#ac265e",
-        "#9c155f",
-        "#950f5f",
-        "#830060",
-        "#7c0060",
-        "#680060",
-        "#60005f",
-        "#48005f",
-        "#3d005e"
-      ];
-
+      
+      
       circles.forEach(function (circle, index) {
         circle.x = 0;
         circle.y = 0;
@@ -1483,7 +1551,59 @@
         }
       })
     </script>
+<script>
+  // Coordinates for the cursor
+  const coords = { x: 0, y: 0 };
+  const circles = document.querySelectorAll(".circle");
 
+  // Colors for the circles
+  const colors = [
+    "#ffb56b", "#fdaf69", "#f89d63", "#f59761", "#ef865e", "#ec805d",
+    "#e36e5c", "#df685c", "#d5585c", "#d1525c", "#c5415d", "#c03b5d",
+    "#b22c5e", "#ac265e", "#9c155f", "#950f5f", "#830060", "#7c0060",
+    "#680060", "#60005f", "#48005f", "#3d005e"
+  ];
+
+  // Assign colors and initial position to each circle
+  circles.forEach(function (circle, index) {
+    circle.x = 0;
+    circle.y = 0;
+    circle.style.backgroundColor = colors[index % colors.length];
+  });
+
+  // Update the coordinates when the mouse moves
+  window.addEventListener("mousemove", function (e) {
+    coords.x = e.clientX;
+    coords.y = e.clientY;
+  });
+
+  // Animation function to move the circles
+  function animateCircles() {
+    let x = coords.x;
+    let y = coords.y;
+
+    circles.forEach(function (circle, index) {
+      // Update the position and scale of each circle
+      circle.style.left = x - 12 + "px";
+      circle.style.top = y - 12 + "px";
+      circle.style.scale = (circles.length - index) / circles.length;
+
+      circle.x = x;
+      circle.y = y;
+
+      // Get the next circle in the sequence
+      const nextCircle = circles[index + 1] || circles[0];
+      x += (nextCircle.x - x) * 0.3;
+      y += (nextCircle.y - y) * 0.3;
+    });
+
+    // Repeat the animation
+    requestAnimationFrame(animateCircles);
+  }
+
+  // Start the animation
+  animateCircles();
+</script>
   </body>
 
 </html>

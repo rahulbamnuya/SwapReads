@@ -290,6 +290,7 @@ ion-icon {
   color: white;
 }
 .SwapReads .logo {
+  margin-left: 16rem;
   font-size: 2em; /* Large font size */
   font-weight: bold; /* Bold text */
   color: #000; /* Black color for the text */
@@ -300,11 +301,14 @@ ion-icon {
 .SwapReads .logo:hover {
   color: #555; /* Darker color on hover */
 }
-a {
-  color: var(--sonic-silver);
-  text-decoration: none;
-}
 
+a {
+
+  color:  hsl(211.57deg 98.86% 58.43%);
+  text-decoration:  none;
+
+}
+ 
 img {
   height: auto;
 }
@@ -313,13 +317,18 @@ input,
 button,
 textarea {
   background: none;
-  border: none;
+  border: 2px solid grey; /* Removed the none - border and added the following properties*/
+  border-radius: 10px; /* This */
+  padding: 10px; /*This */
   font: inherit;
 }
 
 input,
 textarea {
+  padding-left: 1rem;
+  border: 1px solid #a30f17;
   width: 100%;
+  border-radius: 5px;
 }
 
 button {
@@ -335,11 +344,13 @@ button {
   /*width: 25px;*/
   margin-bottom: 10px;
 }
-
+ 
 address {
-  font-style: normal;
-}
 
+  font-style:  normal;
+
+}
+ 
 ion-icon {
   pointer-events: none;
 }
@@ -556,22 +567,39 @@ body {
   object-fit: cover;
 }
 
-/* --------- Profile Icon -------- */
+
 .action {
-  position: absolute;
-  left: 1440px; 
-  top: 15px; 
-}
-
-.action .profile {
   position: relative;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  margin-right: 15px; 
+}
+ 
+.action .profile {
+
+  position:  relative;
+  width:  60px;
+  height:  60px;
+  border-radius:  50%;
   overflow: hidden;
-  cursor: pointer;
+  cursor:  pointer;
+  bottom:  2px;
+
+}
+.navbar-link {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.navbar-link:hover {
+   /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  border-radius: 7px; /* Rounded corners for button effect */
+}
+
+ 
+ 
 .action .profile img {
   position: absolute;
   top: 0;
@@ -721,7 +749,7 @@ body {
   transition: all 0.3s ease;
 }
 .logopic:hover {
-  transform: scale(1.3); /* Makes the logo 20% larger on hover */
+  transform: scale(1.09); /* Makes the logo 20% larger on hover */
 }
 
 @media (max-width: 768px) {
@@ -1497,33 +1525,37 @@ body.dark-mode .pricing-card button {
   justify-content: center;
   flex-direction: column;
 } */
+/* Iframe styling */
+/* Iframe styling */
 iframe {
   max-width: 800px !important;
-  /* height: 450px !important; */
-  width: 90%;
-  aspect-ratio: 16/9;
+  width: 100%; /* Ensure full width of the container */
+  height: 400px !important; /* Adjust the height of the map */
   border-radius: 5px;
 }
 
+/* Centering section-contact */
 .section-contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+/* Flex layout adjustments */
 .flexi {
   display: flex;
   flex-direction: column;
   width: 75%;
   gap: 0;
-
   margin-bottom: 5rem;
-
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
 
 }
+
+/* Contact section styling */
 .contact {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -1535,6 +1567,7 @@ iframe {
   gap: 20px;
 }
 
+/* Typing animation for the contact header */
 @keyframes typing {
   from {
     width: 0%;
@@ -1554,9 +1587,12 @@ iframe {
   font-size: 3rem;
   width: 0;
 }
+
 .p {
   font-size: 2rem;
 }
+
+/* Contact container with improved responsiveness */
 .contact-container {
   padding-right: 20px;
 
@@ -1570,13 +1606,12 @@ iframe {
   background-color: transparent;
   border: 1px solid #c36969;
   border-radius: 8px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
-  font-family: Montserrat;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
   position: relative;
-  left: 9rem;
+
 }
 
+/* Contact form styling */
 .contact-form {
   flex: 1;
   max-width: 500px;
@@ -1592,10 +1627,11 @@ iframe {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  height:50px;
+  padding: 15px;
   margin-bottom: 20px;
   border: 1px solid #c36969;
-  border-radius: 4px;
+  border-radius: 8px; /* Increased border-radius for a better look */
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -1607,13 +1643,14 @@ iframe {
 }
 
 .contact-form textarea {
-  height: 100px;
+  height: 150px; /* Increased height for the message box */
 }
 
+/* Submit button styling */
 .contact-form button {
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: #d15b83;
   color: white;
   font-size: 16px;
@@ -1626,6 +1663,7 @@ iframe {
   background-color: #f24a8a;
 }
 
+/* Image fader styling */
 .image-fader {
   width: 300px;
   height: 300px;
@@ -1667,6 +1705,7 @@ iframe {
   }
 }
 
+/* Image fader delay adjustments */
 .image-fader img:nth-of-type(1) {
   animation-delay: 0s;
 }
@@ -1682,29 +1721,57 @@ iframe {
 .image-fader img:nth-of-type(4) {
   animation-delay: 6s;
 }
+
+/* Cardi (address box) styling */
 .cardi {
-  background-color: transparent;
-  align-content: stretch;
-  height: fit-content;
-  width: 50%;  
+
+  background-color: inherit;
+  height: auto; /* Let the content dictate the height */
+  padding: 20px; /* Add padding */
+  text-align: left;
+  border-radius: 8px;
+  background-color: #fff; /* Optional: White background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  /* Removed conflicting properties */
+
 }
 
+/* Contact card styling */
 .contact-card {
   margin-top: -14rem;
   padding: 30px;
-  background-color: transparent;
+  background-color: inherit; /* Background color restored */
   border: 1px solid #c36969 !important;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  /* border-radius: var(--radius-5); */
-
-  width: 31rem;
-  height: 36rem;
-
-  height: 600px;
-
+  height: auto; /* Retained from HEAD */
+}
+/* Testing with a light pink background */
+.cardi, .contact-card {
+  background-color: inherit !important; /* Test background color */
+  
+  
+  height: 400px; /* Choose the desired height */
+  display: flex;
 }
 
+
+.flex-container {
+  display: flex;
+  flex-direction:column; /* Adjust as needed, e.g., row, column */
+  gap: 4px; /* Adjust the gap between elements as needed */
+  /* justify-content: space-between; */
+}
+
+.common-width {
+  width: 1200px; /* Adjust the width as needed, e.g., 90%, 800px, etc. */
+  margin:0 ; 
+  max-width: 1200px; /* Optional: Set a maximum width */
+}
+
+
+
+/* Card title styling */
 .contact-card .card-title {
   font-family: var(--ff-philosopher);
   text-transform: uppercase;
@@ -1712,35 +1779,31 @@ iframe {
   font-size: 1.5em;
 }
 
-.contact-card > li:not(:last-child) {
-  margin-block-end: 30px;
-}
-
-.contact-card .card-link {
-  color: var(--chinese-violet);
-  transition: var(--transition-1);
-}
-
-.contact-card .card-link:is(:hover, :focus) {
-  color: var(--old-rose);
-}
-
+/* Map container styling */
 .map-container {
-  position: relative;
-  overflow: hidden; 
-}
-.map-container {
-  position: relative;
-  overflow: hidden; 
+  width: 100%; /* Full width of its container */
+  max-width: 400px; /* Max width for larger screens */
+  aspect-ratio: 1; /* Maintain a square shape */
+  margin: 20px 0; /* Add some spacing above and below */
+  overflow: hidden; /* Ensure overflow is hidden */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .map-container iframe {
-  pointer-events: none; 
-  transition: pointer-events 0.3s ease; 
+  width: 100%; /* Full width of the map container */
+  height: 100%; /* Full height */
+  border: none; /* Remove border */
+  border-radius: 10px; /* Match the container's rounded corners */
 }
-
+@media only screen and (max-width: 768px) {
+  .map-container {
+    max-width: 100%; /* Full width on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+}  
 .map-container:hover iframe {
-  pointer-events: auto; 
+  pointer-events: auto;
 }
 
 /* Responsive adjustments for mobile devices */
@@ -1751,19 +1814,25 @@ iframe {
   }
 
   .contact-container {
-    width: 90%; /* Increase width to 90% on smaller screens */
-    padding: 20px; /* Reduce padding for mobile */
-    flex-direction: column; /* Stack elements vertically */
+    width: 90%;
+    padding: 20px;
+    flex-direction: column;
   }
 
   .contact-form {
-    width: 100%; /* Ensure form takes full width */
-    max-width: none; /* Remove max-width for mobile */
+    width: 100%;
+    max-width: none;
   }
 
   .cardi {
-    width: 80%;
-    margin: 0 !important;
+    width: 100%;
+    margin: 0 auto !important;
+  }
+
+  .cardi .contact-card{
+    width: 90% !important; /* Adjust the width as needed, e.g., 90%, 800px, etc. */
+    margin: 0 auto; /* Center the div horizontally */
+    max-width: 1400px; /* Optional: Set a maximum width */
   }
 
   .contact-card {
@@ -1773,29 +1842,28 @@ iframe {
   }
 
   .image-fader {
-    width: 100%; /* Adjust image fader width for mobile */
-    height: auto; /* Maintain aspect ratio for images */
-    margin-top: 20px; /* Add some spacing */
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
   }
 }
 
-/* For extra small screens (like very narrow phones) */
+/* Extra small screens */
 @media only screen and (max-width: 480px) {
   .contact-container {
-    width: 100%; /* Full width for extra small screens */
+    width: 100%;
   }
 
   .contact-form input, 
   .contact-form textarea {
-    padding: 8px; /* Adjust padding for form inputs */
+    padding: 8px;
   }
 
   .contact-form button {
-    width: 100%; /* Make the submit button full width */
-    font-size: 14px; /* Reduce button font size for better fit */
+    width: 100%;
+    font-size: 14px;
   }
 }
-
 
 /*-----------------------------------*\
   #Rate-Us-Modal
@@ -3498,39 +3566,49 @@ footer {
 .switch-checkbox {
   display: none;
 }
-
+ 
 /* Switch Label */
 .switch-label {
-  position: relative; /* Or absolute if needed */
-  width: 45px;
-  height: 30px;
-  background-color: #ccc;
-  border-radius: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.5s ease;
-  left: 250px; /* Adjust to move it to the right */
-}
 
+  position:  relative;
+  width:  45px;
+  height:  30px;
+  background-color:  #ccc;
+  border-radius:  20px;
+  cursor:  pointer;
+  display:  flex;
+  align-items:  center;
+  justify-content:  center;
+  padding:  0 5px;
+  box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:  background-color 0.5s ease;
+  margin-top:  -30px;
+  margin-left:  85px;
+  margin-bottom:  14px;
+  left:  200px;
+  top:  17px;
+
+}
+ 
 .switch-label .sun-icon,
 .switch-label .moon-icon {
-  font-size: 19px;
-  position: absolute;
+
+  font-size:  19px;
+  position:  absolute;
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
   transition: opacity 0.5s ease, color 0.5s ease;
-}
 
+}
+ 
 .switch-label .sun-icon {
-  color: #f39c12;
-  left: 2px;
-}
 
+  color: #f39c12;
+  left:  2px;
+
+}
+ 
 .switch-label .moon-icon {
   color: #bdc3c7;
   opacity: 0;

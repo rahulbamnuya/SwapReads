@@ -154,8 +154,8 @@ p {
 	display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6px;
   padding: 35px;
+  padding-bottom:0px;
   margin-top: -30px;
 }
 #login-form{
@@ -165,25 +165,24 @@ p {
   align-self: center;
 }
 .note {
-  width: 50%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 750px;
   font-family: var(--ff-philosopher);
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
   position: relative;
-  top: 140px;
+  top: 40px;
 }
 
 .note h1 {
-  font-size: 5rem;
-  font-weight: bold;
-  color: rgb(247, 150, 150);
+  font-size: 2.5rem;
+  color: rgb(245, 94, 94);
   text-align: center;
   font-family: var(--ff-philosopher);
 }
 
 .note h2 {
   font-size: 2rem;
-  font-weight: bold;
+ /* font-weight: bold;*/
   color: var(--sonic-silver);
   /* color: #4267b2; */
   text-align: center;
@@ -191,7 +190,7 @@ p {
 }
 
 .note div {
-  padding-top: 2rem;
+  padding-top: 0.1rem;
   font-size: 2.5rem;
   font-weight: 500;
 }
@@ -200,13 +199,12 @@ p {
   position: relative;
   display: flex;
   flex-direction: column;
-  top: 140px;
+  /*top: 140px;*/
   left: 50%;
-  bottom: 10%;
   transform: translateX(-50%);
   /* background-color: #240046; */
   background-color: var(--light-pink);
-  max-height: 60rem;
+  max-height: 50.8rem;
   width: 100%;
   max-width: 50rem;
   overflow: hidden;
@@ -238,11 +236,12 @@ p {
 }
 
 .login label {
-  margin: 5% 0 5%;
+  margin-top: 2%;
 }
 
 .login input{
   width: 100%;
+  color: rgb(208, 153, 160);
 }
 .light-mode label{
   color: black;
@@ -250,7 +249,7 @@ p {
 
 label {
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   justify-content: center;
   display: flex;
   font-weight: bold;
@@ -285,6 +284,7 @@ input[type="password"]::-ms-reveal {
   outline: none;
   border-radius: 4px;
   font-size: 1.5rem;
+  color: rgb(142, 66, 78);
 }
 .input.dark-mode{
   width: 100%;
@@ -366,7 +366,7 @@ input[type="password"]::-ms-reveal {
   cursor: pointer;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 2px;
+  margin-bottom: 30px;
 }
 
 #google-sign-in::before,
@@ -402,8 +402,8 @@ input[type="password"]::-ms-reveal {
   color: var(--old-rose);
   background-color: #eee;
   cursor: pointer;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 #register:hover {
@@ -432,8 +432,8 @@ input[type="password"]::-ms-reveal {
 
 .register label {
   color: var(--old-rose);
-  margin-top: 1rem;
-  transform: scale(0.6);
+  font-size: 1.7rem;
+  margin: 20px 0 0 0;
 }
 
 .register label:hover {
@@ -456,7 +456,6 @@ input[type="password"]::-ms-reveal {
 /*Button*/
 .form button {
   width: 95%;
-  height: 40px;
   margin: 12px auto 10%;
   color: #fff;
   background: transparent;
@@ -467,6 +466,7 @@ input[type="password"]::-ms-reveal {
   cursor: pointer;
   transition: 0.25s ease;
   box-shadow: 1px 1px 10px 3px #24004628;
+  padding-bottom: none;
 }
 
 .form button:hover {
@@ -519,10 +519,10 @@ input[type="password"]::-ms-reveal {
 
 .forget-password {
   font-size: small;
-  text-align: center;
-  margin: -20px 0 10px;
-  color: white;
+  text-align: right;
   font-weight: bold;
+  margin : -20px 0 5px;
+  display : block;
 }
 
 .forget-password a {
@@ -791,9 +791,11 @@ body.dark-mode {
 }
 .dark-mode .input{
   background: #292626;
+  color: rgb(208, 153, 160);
 }
 .light-mode .input{
   background: #e6e6e6;
+  color: rgb(143, 55, 84);
 }
 
 .register label.dark-mode{
@@ -1033,6 +1035,14 @@ footer {
   max-width: 600px;
   margin: 0 auto;
   font-size: 1.5rem;
+}
+
+.foot-quick:hover {
+  color: #000000; /* Change to white for clear visibility */
+}
+
+.foot-quick:hover i, .foot-quick:hover p {
+  color: #000000; /* White for better visibility on hover */
 }
 
 .foot-middle {
